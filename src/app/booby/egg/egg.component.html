@@ -1,0 +1,45 @@
+<svg id="egg" class="egg" xmlns="http://www.w3.org/2000/svg" width="58.891" height="29.742" viewBox="0 0 15.581668 7.8693646" (mouseenter)="crackEgg()" (mouseleave)="fixEgg()">
+  <g id="wholeEgg" opacity="1">
+    <path id="egg" [attr.d]="eggService.pathEgg" fill="#fff" stroke="#000" stroke-width=".265" stroke-linecap="round" />
+    <path id="lineTop" [attr.d]="eggService.pathsLines[0]" />
+    <path id="lineMiddle" [attr.d]="eggService.pathsLines[1]" />
+    <path id="lineBottom" [attr.d]="eggService.pathsLines[2]" />
+  </g>
+  <g id="rightHalf" opacity="0">
+    <path id="eggRight" [attr.d]="eggService.pathEggRight" fill="#fff" stroke="#000" stroke-width=".265" stroke-linecap="round"
+    />
+    <path id="lineTopRight" [attr.d]="eggService.pathsLinesRight[0]" />
+    <path id="lineMiddleRight" [attr.d]="eggService.pathsLinesRight[1]" />
+    <path id="lineBottomRight" [attr.d]="eggService.pathsLinesRight[2]" />
+  </g>
+  <g id="leftHalf" opacity="0">
+    <path id="eggLeft" [attr.d]="eggService.pathEggLeft" fill="#fff" stroke="#000" stroke-width=".265" stroke-linecap="round"
+    />
+    <path id="lineTopLeft" [attr.d]="eggService.pathsLinesLeft[0]" />
+    <path id="lineMiddleLeft" [attr.d]="eggService.pathsLinesLeft[1]" />
+    <path id="lineBottomLeft" [attr.d]="eggService.pathsLinesLeft[2]" />
+  </g>
+</svg>
+
+<!-- <svg id="egg" *ngIf='wholeEgg; else crackedEgg' class="egg" xmlns="http://www.w3.org/2000/svg" width="58.891" height="29.742" viewBox="0 0 15.581668 7.8693646">
+  <path id="egg" [attr.d]="eggService.pathEgg" fill="#fff" stroke="#000" stroke-width=".265" stroke-linecap="round"/>
+  <path id="lineTop" [attr.d]="eggService.pathsLines[0]"/>
+  <path id="lineMiddle" [attr.d]="eggService.pathsLines[1]"/>
+  <path id="lineBottom" [attr.d]="eggService.pathsLines[2]"/>
+</svg>
+<ng-template #crackedEgg>
+  <svg id="eggCracked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.581668 7.8693646" height="29.742" width="58.891" (mouseenter)="crackEgg()" (mouseleave)="fixEgg()">
+    <g id="rightHalf">
+      <path id="eggRight" [attr.d]="eggService.pathEggRight" fill="#fff" stroke="#000" stroke-width=".265" stroke-linecap="round"/>
+      <path id="lineTopRight" [attr.d]="eggService.pathsLinesRight[0]"/>
+      <path id="lineMiddleRight" [attr.d]="eggService.pathsLinesRight[1]"/>
+      <path id="lineBottomRight" [attr.d]="eggService.pathsLinesRight[2]"/>
+    </g>
+    <g id="leftHalf">
+      <path id="eggLeft" [attr.d]="eggService.pathEggLeft" fill="#fff" stroke="#000" stroke-width=".265" stroke-linecap="round"/>
+      <path id="lineTopLeft" [attr.d]="eggService.pathsLinesLeft[0]"/>
+      <path id="lineMiddleLeft" [attr.d]="eggService.pathsLinesLeft[1]"/>
+      <path id="lineBottomLeft" [attr.d]="eggService.pathsLinesLeft[2]"/>
+    </g>
+  </svg>
+</ng-template> -->

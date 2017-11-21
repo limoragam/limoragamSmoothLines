@@ -1,0 +1,117 @@
+.table {
+    display: grid;
+    grid-template-columns: 30% 20% 20%;
+    grid-gap: 10px;
+}
+
+.la-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.column-filler {
+    flex: 2 0;
+}
+.column-menu {
+    // align-self: end;
+    // justify-self: end;
+    flex: 0;
+    text-align: center;
+}
+
+.column-booby {
+    // align-self: end; // grid attributes
+    // justify-self: start;
+    flex: 0;
+    margin: 0 1em;
+}
+
+.column-content {
+    flex: 2 1;
+    align-self: flex-start;
+    #hello {
+        opacity: 0;
+        -webkit-animation: fadein 1s ease-in 1s forwards;
+        -moz-animation: fadein 1s ease 1s forwards;
+        -o-animation: fadein 1s ease 1s forwards;
+        -ms-animation: fadein 1s ease 1s forwards;
+        animation: fadein 1s ease-in 1s forwards;
+    }
+    #myname {
+        opacity: 0;
+        -webkit-animation: fadein 1s ease-in 2s forwards;
+        -moz-animation: fadein 1s ease 2s forwards;
+        -o-animation: fadein 1s ease 2s forwards;
+        -ms-animation: fadein 1s ease 2s forwards;
+        animation: fadein 1s ease-in 2s forwards;
+    }
+    #iam {
+        opacity: 0;
+        -webkit-animation: fadein 1s ease-in 3s forwards;
+        -moz-animation: fadein 1s ease 3s forwards;
+        -o-animation: fadein 1s ease 3s forwards;
+        -ms-animation: fadein 1s ease 3s forwards;
+        animation: fadein 1s ease-in 3s forwards;
+    }
+    #hire {
+        opacity: 0;
+        -webkit-animation: fadein 1s ease-in 5s forwards;
+        -moz-animation: fadein 1s ease 5s forwards;
+        -o-animation: fadein 1s ease 5s forwards;
+        -ms-animation: fadein 1s ease 5s forwards;
+        animation: fadein 1s ease-in 5s forwards;
+    }
+    #gettoknow {
+        opacity: 0;
+        -webkit-animation: fadein 1s ease-in 5.5s forwards;
+        -moz-animation: fadein 1s ease 5.5s forwards;
+        -o-animation: fadein 1s ease 5.5s forwards;
+        -ms-animation: fadein 1s ease 5.5s forwards;
+        animation: fadein 1s ease-in 5.5s forwards;
+    }
+    #feet {
+        opacity: 0;
+        -webkit-animation: fadein 1s ease-in 6s forwards;
+        -moz-animation: fadein 1s ease 6s forwards;
+        -o-animation: fadein 1s ease 6s forwards;
+        -ms-animation: fadein 1s ease 6s forwards;
+        animation: fadein 1s ease-in 6s forwards;
+    }
+    ul {
+        list-style: inside;
+    }
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-ms-keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.bla {
+    display: inline-block;
+    bottom: 0;
+}
