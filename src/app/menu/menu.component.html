@@ -1,10 +1,10 @@
-<nav>
+<nav class="menu">
   <ul>
-    <app-egg [ngClass]="egg"></app-egg>
-    <li>Home</li>
-    <li>About Me</li>
-    <li>Contact Me</li>
-    <li>See My Feet</li>
-    <li>About Site</li>
+    <li class="item"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Nest</a></li>
+    <li class="item"><a routerLink="/about_me" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About Me</a></li>
+    <li class="item"><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact Me</a></li>
+    <li class="item"><a routerLink="/feet" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">See My Feet</a></li>
+    <li class="item"><a routerLink="/about_site" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"></a>About Site</li>
+    <li class="egg"><app-egg></app-egg></li>
   </ul>
 </nav>
