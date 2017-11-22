@@ -1,9 +1,3 @@
-.table {
-    display: grid;
-    grid-template-columns: 30% 20% 20%;
-    grid-gap: 10px;
-}
-
 .la-container {
     display: flex;
     flex-direction: row;
@@ -17,15 +11,11 @@
     flex: 2 0;
 }
 .column-menu {
-    // align-self: end;
-    // justify-self: end;
     flex: 0;
     text-align: center;
 }
 
 .column-booby {
-    // align-self: end; // grid attributes
-    // justify-self: start;
     flex: 0;
     margin: 0 1em;
 }
@@ -111,7 +101,7 @@
     100% {opacity: 1;}
 }
 
-.bla {
+.appmenu {
     display: inline-block;
     bottom: 0;
 }
