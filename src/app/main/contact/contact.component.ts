@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
-
+export class ContactComponent {
+  @ViewChild('f') formObject:NgForm;
+  
   constructor() { }
 
-  ngOnInit() {
+  onSubmit() {
+    //Send mail here
   }
 
 }

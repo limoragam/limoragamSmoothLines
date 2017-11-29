@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 
 import { AnimationFrame } from '../animation-frame.model';
+import { AttributesService } from '../attributes.service';
 
 @Injectable()
 export class EggService {
-  attrEgg = {fill:'white', stroke:'black', 'stroke-width':.265};
+  attrEgg = this.attributesService.attrEgg;
   
   pathEgg = "M7.962 7.693C3.416 8.063 1.81 6.05 1.746 4.05 1.68 2.05 3.36.394 6.83.338c3.47-.055 7.433 1.51 7.5 3.578.066 2.067-3.791 3.567-6.368 3.777z";
   pathEggRight = "M5.948 6.758l1.91-1.46-1.111-.59L8.17 3.145 5.948 1.199l.936-.856c3.416-.06 7.38 1.506 7.446 3.573.066 2.067-3.791 3.567-6.347 3.777z"; 
@@ -60,4 +61,6 @@ export class EggService {
     new AnimationFrame(this.svgId, this.groupLeftHalfId, {'transform':'t0,0,r0,0,0'}, 300, null),
     new AnimationFrame(this.svgId, this.groupLeftHalfId, {opacity:0}, 300, null),
   ];
+
+  constructor(private attributesService:AttributesService) {}
 }
