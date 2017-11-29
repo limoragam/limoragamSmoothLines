@@ -16,6 +16,7 @@ ul {
 .egg {
     font-size: 0;
     z-index: 20;
+    padding: 0.8rem 0.15rem 0 0.15rem;
 }
 
 li.item {
@@ -24,34 +25,34 @@ li.item {
     opacity: 0;
 }
 
-.menu:hover li.item {
-    animation-name: menufly;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-}
+// .menu:hover li.item {
+//     animation-name: menufly;
+//     animation-duration: 1s;
+//     animation-timing-function: ease-in;
+//     animation-fill-mode: forwards;
+// }
 
-@keyframes menufly {
-    50% {transform: translateY(350%); font-size: 0.3em; opacity: 0.5}
-    100% {transform: translateY(0); font-size: 0.9em; opacity: 1}
-}
+// @keyframes menufly {
+//     50% {transform: translateY(350%); font-size: 0.3em; opacity: 0.5}
+//     100% {transform: translateY(0); font-size: 0.9em; opacity: 1}
+// }
 
-li:nth-child(2) {
-    animation-delay: 0s;
-}
+// li:nth-child(2) {
+//     animation-delay: 0s;
+// }
 
-li:nth-child(3) {
-    animation-delay: 0.15s;
-}
+// li:nth-child(3) {
+//     animation-delay: 0.15s;
+// }
 
-li:nth-child(4) {
-    animation-delay: 0.3s;
-}
+// li:nth-child(4) {
+//     animation-delay: 0.3s;
+// }
 
-li:nth-child(5) {
-    animation-delay: 0.45s;
-}
+// li:nth-child(5) {
+//     animation-delay: 0.45s;
+// }
 
-li:nth-child(6) {
-    animation-delay: 0.6s;
-}
+// li:nth-child(6) {
+//     animation-delay: 0.6s;
+// }

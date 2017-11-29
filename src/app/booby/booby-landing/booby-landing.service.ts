@@ -2,14 +2,15 @@ declare var mina:any;
 
 import { Injectable } from '@angular/core';
 import { AnimationFrame } from '../animation-frame.model';
+import { AttributesService } from '../attributes.service';
 
 @Injectable()
 export class BoobyLandingService {
-  attrBody = {fill:'white', 'fill-rule':'evenodd', stroke:'black', 'stroke-width':.265};
-  attrWing = {fill:'black', 'fill-rule':'evenodd', stroke:'black', 'stroke-width':.265};
-  attrEye = {fill:'none', stroke:'black', 'stroke-width':.265};
-  attrBeak = {fill:'#00c8e1', 'fill-rule':'evenodd', stroke:'black', 'stroke-width':.265};
-  attrEyebrow = {fill:'none', 'stroke-width':.794, 'stroke-linecap':'round'};
+  attrBody = this.attributesService.attrBody;
+  attrWing = this.attributesService.attrWing;
+  attrEye = this.attributesService.attrEye;
+  attrBeak = this.attributesService.attrBeak;
+  attrEyebrow = this.attributesService.attrEyebrow;
   
   pathsBody = [
     "M13.263 42.67c-1.033 2.905.444 3.863.412 6.159 0 0-4.732 1.268-9.113 5.816C.499 58.863.705 65.111.657 67.503c-.055 2.682.04 4.666 1.87 7.675 1.763 2.9 4.444 5.866 16.105 5.796 11.094-.067 15.948-1.7 17.546-3.522 2.308-2.633 3.655-6.873 3.33-14.663-.16-3.839-2.428-6.217-3.831-7.428-2.937-2.532-10.06-6.357-10.06-6.357s.683-1.596.897-2.739c.256-1.372.388-4.171-1.259-5.117-2.125-1.22-2.98-1.275-5.8-1.381-3.1-.118-5.224 1.04-6.192 2.902z",
@@ -141,4 +142,6 @@ export class BoobyLandingService {
     new AnimationFrame(this.svgId, this.pathEyebrowId, {d: this.pathsEyebrow[1]}, 1000, mina.easeinout),
     new AnimationFrame(this.svgId, this.pathEyebrowId, {d: this.pathsEyebrow[2]}, 1000, mina.easeinout),
   ];
+
+  constructor(private attributesService:AttributesService) {}
 }
