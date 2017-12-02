@@ -4,16 +4,16 @@ import { Injectable } from '@angular/core';
 export class AttributesService {
   // General
   attrLine = {stroke:'black', 'stroke-width':'0.02rem'};
-  brown = "#784623";
-  blue = "#00c8e1";
+  wingcolor = "#784623";
+  feetcolor = "#00c8e1";
   
   // Booby
   attrBody = {fill:'white', 'fill-rule':'evenodd'};
-  attrWing = {fill:this.brown, 'fill-rule':'evenodd'};
+  attrWing = {fill:this.wingcolor, 'fill-rule':'evenodd'};
   attrEye = {fill:'none'};
-  attrBeak = {fill:this.blue, 'fill-rule':'evenodd'};
+  attrBeak = {fill:this.feetcolor, 'fill-rule':'evenodd'};
   attrEyebrow = {fill:'none', stroke:'black', 'stroke-width':'0.06rem', 'stroke-linecap':'round'};
-  attrFoot = {fill:this.blue, 'fill-rule':'evenodd'};
+  attrFoot = {fill:this.feetcolor, 'fill-rule':'evenodd'};
   
   // Egg
   attrEgg = {fill:'white', 'fill-rule':'evenodd'};

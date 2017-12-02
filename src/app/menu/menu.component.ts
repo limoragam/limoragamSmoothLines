@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 import { AnimationService } from '../booby/animation.service';
@@ -34,8 +34,12 @@ export class MenuComponent {
     {'menuItemState':'hidden', 'routerLink':'/about_me', 'text':'About Me'},
     {'menuItemState':'hidden', 'routerLink':'/contact', 'text':'Contact Me'},
     {'menuItemState':'hidden', 'routerLink':'/feet', 'text':'See My Feet'},
-    {'menuItemState':'hidden', 'routerLink':'/about_site', 'text':'About Site'},
+    {'menuItemState':'hidden', 'href':"#", 'text':'About Site'},
   ];
+
+  @Input() dimMenu = false;
+  @Output() aboutSiteVisibilityEvent = new EventEmitter<boolean>();
+  aboutSiteVisibility = false;
 
   constructor(private animationService:AnimationService) {}
 
@@ -46,5 +50,11 @@ export class MenuComponent {
         menuItem.menuItemState = 'displayed';
       }, delay)
     });
+  }
+
+  onAboutSiteChangeVisibility(visibility:boolean) {
+    this.aboutSiteVisibility = visibility;
+    this.aboutSiteVisibilityEvent.emit(visibility);
+    return false;
   }
 }

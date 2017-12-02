@@ -1,3 +1,5 @@
+@import "../../globalstyles.scss";
+
 .la-container {
     display: flex;
     flex-direction: row;
@@ -13,6 +15,12 @@
 .column-menu {
     flex: 0;
     text-align: center;
+    z-index: 10;
+}
+
+.appmenu {
+    display: inline-block;
+    bottom: 0;
 }
 
 .column-booby {
@@ -71,9 +79,6 @@
         -ms-animation: fadein 1s ease 6s forwards;
         animation: fadein 1s ease-in 6s forwards;
     }
-    ul {
-        list-style: inside;
-    }
 }
 
 @keyframes fadein {
@@ -99,9 +104,4 @@
 @-ms-keyframes fadein {
     0% {opacity: 0;}
     100% {opacity: 1;}
-}
-
-.appmenu {
-    display: inline-block;
-    bottom: 0;
 }

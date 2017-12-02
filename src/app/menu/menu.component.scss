@@ -1,16 +1,56 @@
+@import "../globalstyles.scss";
+
 * {
-    text-align: center;
     white-space: nowrap;
 }
 
-ul {
+#aboutsite {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.overlay {
+    background: rgba(256, 256, 256, 0.6);
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 22;
+}
+
+.popup {
+    width: 118%;
+    text-align: left;
+    background-color:white;
+    position: relative;
+    padding: 0.6rem 0.5rem 0.1rem 1rem;
+    border: 0.3rem solid $wing-color;
+    border-radius: 0.5rem;
+    z-index: 24;
+    margin-bottom: 1rem;
+}
+
+.x {
+    position: relative;
+    float: right;
+    top: -0.5rem;
+    font-size: 1.5rem;
+}
+
+ul .menu-list {
+    text-align: center;
     display: flex;
     flex-direction: column;
     list-style: none;
     margin-bottom: 0;
-    cursor: pointer;
+    // cursor: pointer;
     font-size: 0.9em;
     overflow: hidden;
+}
+
+li.menu-item:before {
+    content: none;
 }
 
 .egg {
@@ -19,11 +59,11 @@ ul {
     padding: 0.8rem 0.15rem 0 0.15rem;
 }
 
-li.item {
-    transform: translateY(700%);
-    font-size: 0;
-    opacity: 0;
-}
+// li.item {
+//     transform: translateY(700%);
+//     font-size: 0;
+//     opacity: 0;
+// }
 
 // .menu:hover li.item {
 //     animation-name: menufly;

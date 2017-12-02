@@ -16,6 +16,8 @@ import { EggComponent } from './booby/egg/egg.component';
 import { MenuComponent } from './menu/menu.component';
 import { SquawkComponent } from './booby/squawk/squawk.component';
 
+import { SafeUrlPipe } from './safe-url.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { SquawkComponent } from './booby/squawk/squawk.component';
     EggComponent,
     MenuComponent,
     SquawkComponent,
+    SafeUrlPipe,
   ],
   imports: [
     BrowserModule,
