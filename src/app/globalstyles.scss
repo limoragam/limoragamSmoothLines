@@ -1,0 +1,10 @@
+$wing-color: #784623;
+$feet-color: #00c8e1;
+
+ul {
+    list-style: none;
+}
+
+li:before {
+    content: '\25BA';
+}

@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+$text-color: #282820;
+
 * {
-    /* font-family: 'Overlock', cursive; */
     margin: 0;
     padding: 0;
     font-family: 'Overlock', sans-serif;
-    color: #282820;
+    color: $text-color;
     // border: solid 1px red;
 }
 
@@ -24,7 +25,7 @@ a {
 a:hover, a.active {
     background-color: transparent;
     text-decoration: none;
-    cursor: pointer;
+    // cursor: pointer;
     font-weight: 700;
     color: #282820;
 }
