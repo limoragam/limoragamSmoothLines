@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { ActivatedRoute } from '@angular/router';
 
 import { AnimationService } from '../booby/animation.service';
 
@@ -34,21 +35,28 @@ export class MenuComponent {
     {'menuItemState':'hidden', 'routerLink':'/about_me', 'text':'About Me'},
     {'menuItemState':'hidden', 'routerLink':'/contact', 'text':'Contact Me'},
     {'menuItemState':'hidden', 'routerLink':'/feet', 'text':'See My Feet'},
-    {'menuItemState':'hidden', 'href':"#", 'text':'About Site'},
+    {'menuItemState':'hidden', 'routerLink':'#', 'href':"#", 'text':'About Site'},
   ];
 
   @Input() dimMenu = false;
   @Output() aboutSiteVisibilityEvent = new EventEmitter<boolean>();
   aboutSiteVisibility = false;
 
-  constructor(private animationService:AnimationService) {}
+  constructor(private animationService:AnimationService, private activatedRoute:ActivatedRoute) {}
 
   displayMenuItems() {
+    let currentPath = "/";
+    if(this.activatedRoute.snapshot.url.length > 0) {
+      currentPath = currentPath + this.activatedRoute.snapshot.url[0].path;
+    }
+
     this.menuItems.forEach((menuItem, i) => {
       let delay = (i+1) * 100;
-      setTimeout(() => {
-        menuItem.menuItemState = 'displayed';
-      }, delay)
+      if(menuItem.routerLink !== currentPath) {
+        setTimeout(() => {
+          menuItem.menuItemState = 'displayed';
+        }, delay)
+      }
     });
   }
 

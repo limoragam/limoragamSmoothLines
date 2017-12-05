@@ -21,6 +21,7 @@
 
 .squawk {
     z-index: -1;
+    transition: opacity 300ms ease-in-out;
 }
 
 .menu {
@@ -39,6 +40,7 @@
     position: absolute;
     bottom: 0;
     left: 80%;
+    transition: opacity 300ms ease-in-out;
 }
 
 .la-button {
@@ -49,13 +51,13 @@
     opacity: 1;
 }
 
+input.ng-invalid.ng-touched, 
+textarea.ng-invalid.ng-touched {
+    border: 1px solid #e22b00;
+}
+
 .column-content {
     flex: 2 1;
     align-self: flex-start;
-}
-
-.appmenu {
-    display: inline-block;
-    bottom: 0;
 }
 

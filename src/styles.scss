@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 $text-color: #282820;
+$hover-color: $text-color;
+$background-color: #f7f5ea;
 
 * {
     margin: 0;
@@ -11,7 +13,8 @@ $text-color: #282820;
 
 body,html{
     width:100%;
-    background-color: #f7f5ea;
+    height: 90%;
+    background-color: $background-color;
 }
 
 body {
@@ -19,13 +22,13 @@ body {
 }
 
 a {
-    color: #282820;
+    color: $hover-color;
 }
 
 a:hover, a.active {
     background-color: transparent;
     text-decoration: none;
-    // cursor: pointer;
     font-weight: 700;
-    color: #282820;
+    color: $hover-color;
 }
+

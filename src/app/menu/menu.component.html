@@ -1,5 +1,4 @@
 <div id="aboutsite" [ngStyle]="{'opacity': aboutSiteVisibility ? 1 : 0}">
-  <!-- <div class="overlay"></div> -->
   <div class="popup">
     <a class="x" href="javascript:void(0)" (click)="onAboutSiteChangeVisibility(false)">&times;</a>
     <h4>About this site</h4>
@@ -14,17 +13,20 @@
 <nav class="menu" [ngStyle]="{'opacity': dimMenu ? 0.3 : 1}">
   <ul class="menu-list" [ngStyle]="{'cursor': dimMenu ? 'default' : 'pointer'}">
     <li class="menu-item" *ngFor="let menuItem of menuItems" [@itemFlyout]="menuItem.menuItemState">
+      <!-- if item has an href, use href -->
       <a 
-        *ngIf="menuItem.routerLink" 
+        *ngIf="menuItem.href; else aRouterLink" 
+        [href]="dimMenu ? null : menuItem.href" 
+        [ngStyle]="{'cursor': dimMenu ? 'default' : 'pointer'}"
+        (click)="onAboutSiteChangeVisibility(true)">{{menuItem.text}}</a>
+      <!-- otherwise, use routerLink -->
+      <ng-template #aRouterLink>
+        <a
         [ngStyle]="{'cursor': dimMenu ? 'default' : 'pointer'}"
         [routerLink]="dimMenu ? null : menuItem.routerLink" 
         routerLinkActive="active" 
         [routerLinkActiveOptions]="{exact:true}">{{menuItem.text}}</a>
-      <a 
-        *ngIf="menuItem.href" 
-        [href]="dimMenu ? null : menuItem.href" 
-        [ngStyle]="{'cursor': dimMenu ? 'default' : 'pointer'}"
-        (click)="onAboutSiteChangeVisibility(true)">{{menuItem.text}}</a>
+      </ng-template>
     </li>
     <li class="egg" (mouseenter)="displayMenuItems()">
       <app-egg></app-egg>
