@@ -1,3 +1,68 @@
-<p>
-  about-me works!
-</p>
+<div class="la-container">
+  <div class="column-filler"></div>
+  <div class="column-menu">
+    <app-menu (aboutSiteVisibilityEvent)="dim = $event" [ngClass]="'appmenu'" [dimMenu]="dim"></app-menu>
+  </div>
+  <div class="column-booby" [ngStyle]="{'opacity': dim ? 0.3 : 1}">
+    <app-booby-landing></app-booby-landing>
+  </div>
+  <div class="column-content" [ngStyle]="{'opacity': dim ? 0.3 : 1}">
+    <div id="timeline">
+      <div class="arrow prev">
+        <p class="p-prev">
+          <a href="#" id="prev">+</a>
+        </p>
+      </div>
+      <div class="timeline-container">
+        <div class="dates">
+          <ul id="dates">
+            <li><a href="#2015-2017">2015-2017</a></li>
+            <li><a href="#2013-2015">2013-2015</a></li>
+            <li><a href="#">2007-2013</a></li>
+            <li><a href="#">2002-2007</a></li>
+            <li><a href="#">2000-2001</a></li>
+            <li><a href="#">1998-2001</a></li>
+            <li><a href="#">1997-2000</a></li>
+            <li><a href="#">1996-1997</a></li>
+            <li><a href="#">1992-1995</a></li>
+            <li><a href="#">1988-1992</a></li>
+            <li><a href="#">1986-1988</a></li>
+          </ul>
+        </div>
+        <div class="entries">
+          <h4>Software&nbsp;Engineer @Harmonic</h4>
+          <p id="2015-2017">
+            Harmonic enables customers to produce and deliver high quality video. The delivery side, of which I was part,
+            involved moving lots of bits from one place to another at incredible speeds and accuracy. Impressive
+            stuff, done by some impressively smart people, but not really my cup of tea.<br>
+            There was a period of several euphoric months, though, in which I was in a project that involved web and UI. 
+            This was absolutely heaven, I woke up every morning with a smile and couldn't wait to go to work. I loved 
+            stirring the DOM and figuring out how it all worked.<br>
+            Then it hit me. This is what I'd really like my life to look like.<br>
+            This project was short lived, and with it my euphoria.<br>
+            Which is good. Because here I am, doing what I like.
+          </p>
+          <h3>Waves Audio</h3>
+          <h4>Software&nbsp;Engineer, Plug&#8209;Ins&nbsp;Team</h4> <!-- none-breaking hyphen & space -->
+          <p id="2013-2015">
+              In Waves Audio, I started out as part of the Plug-Ins team, creating new plug-ins utilizing the
+              existing infrastructure for plug-ins, and designing new features where the infrastructure fell short
+              of requirements. I gradually moved deeper into the infrastructure, adding new capabilities and
+              improvements.
+              ☼ Cross-platform work (Windows, Mac).
+              ☼ New feature design and implementation.
+              ☼ Most code is written in C++; knowledge, understanding and implementation of scripting (perl,
+              python) is required.
+              ☼ Hands-on and problem-solving capabilities are essential.
+          </p>
+        </div>
+      </div>
+      <div class="arrow next">
+        <p class="p-next">
+          <a href="#" id="next">-</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="column-filler"></div>
+</div>

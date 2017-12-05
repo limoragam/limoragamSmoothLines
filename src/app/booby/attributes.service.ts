@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class AttributesService {
   // General
   attrLine = {stroke:'black', 'stroke-width':'0.02rem'};
-  wingcolor = "#784623";
+  wingcolor = "#6d5e50";
   feetcolor = "#00c8e1";
   
   // Booby

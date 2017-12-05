@@ -6,17 +6,7 @@
 
 #aboutsite {
     opacity: 0;
-    transition: opacity 200ms ease-in-out;
-}
-
-.overlay {
-    background: rgba(256, 256, 256, 0.6);
-    position: fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index: 22;
+    transition: opacity 300ms ease-in-out;
 }
 
 .popup {
@@ -25,7 +15,7 @@
     background-color:white;
     position: relative;
     padding: 0.6rem 0.5rem 0.1rem 1rem;
-    border: 0.3rem solid $wing-color;
+    border: 0.3rem solid $wingcolor;
     border-radius: 0.5rem;
     z-index: 24;
     margin-bottom: 1rem;
@@ -44,7 +34,6 @@ ul .menu-list {
     flex-direction: column;
     list-style: none;
     margin-bottom: 0;
-    // cursor: pointer;
     font-size: 0.9em;
     overflow: hidden;
 }
@@ -56,14 +45,9 @@ li.menu-item:before {
 .egg {
     font-size: 0;
     z-index: 20;
-    padding: 0.8rem 0.15rem 0 0.15rem;
+    padding: 0.5rem 0.05rem 0 0.05rem;
+    margin: 0 0.5rem 0 0.5rem;
 }
-
-// li.item {
-//     transform: translateY(700%);
-//     font-size: 0;
-//     opacity: 0;
-// }
 
 // .menu:hover li.item {
 //     animation-name: menufly;
