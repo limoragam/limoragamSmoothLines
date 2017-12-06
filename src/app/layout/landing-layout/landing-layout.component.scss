@@ -1,21 +1,31 @@
 @import "../../globalstyles.scss";
 
 .la-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin: 0;
-    width: 100%;
-    padding: 0;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 2fr 1fr 2fr 3fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "fillerL menu booby content fillerR"
+                         "fillerL menu booby content fillerR";
+    position: relative;
 }
 
-.column-filler {
-    flex: 2 0;
+.area {
+    transition: opacity 300ms ease-in-out;
 }
-.column-menu {
-    flex: 0;
-    text-align: center;
+
+.menu {
+    grid-area: menu;
     z-index: 10;
+    align-self: end;
+    justify-self: right;
+}
+
+.about-site {
+    grid-column-start: menu-start;
+    grid-column-end: booby-end;
+    grid-row: 1;
+    z-index: 12;
 }
 
 .appmenu {
@@ -23,13 +33,21 @@
     bottom: 0;
 }
 
-.column-booby {
-    flex: 0;
-    margin: 0 1em;
+.booby {
+    grid-area: booby;
+    align-self: end;
+    justify-self: center;
 }
 
-.column-content {
-    flex: 2 1;
-    align-self: flex-start;
+.content {
+    grid-area: content;
+}
+
+.fillerL {
+    grid-area: fillerL;
+}
+
+.fillerR {
+    grid-area: fillerR;
 }
 

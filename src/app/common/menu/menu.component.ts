@@ -15,12 +15,12 @@ import { AnimationService } from '../../booby/animation.service';
         'font-size':0,
         transform:'translateY(700%)',
       })),
-      state('displayed', style({
+      state('visible', style({
         opacity:1,
         'font-size':'0.9em',
         transform:'translateY(0)'
       })),
-      transition('hidden => displayed', animate("600ms 50ms ease", keyframes([
+      transition('hidden => visible', animate("600ms 50ms ease", keyframes([
         style({offset:0, opacity:0, 'font-size':0, transform:'translateY(700%)'}),
         style({offset:0.5, opacity:0.5, 'font-size':'0.3em', transform:'translateY(550%)'}),
         style({offset:1, opacity:1, 'font-size':'0.9em', transform:'translateY(0)'}),
@@ -38,9 +38,9 @@ export class MenuComponent {
     {'menuItemState':'hidden', 'routerLink':'#', 'href':"#", 'text':'About Site'},
   ];
 
-  @Input() dimMenu = false;
-  @Output() aboutSiteVisibilityEvent = new EventEmitter<boolean>();
-  aboutSiteVisibility = false;
+  @Input() disableMenu = false;
+  @Output() aboutSiteShowEvent = new EventEmitter<boolean>();
+  menuItemsVisible = false;
 
   constructor(private animationService:AnimationService, private activatedRoute:ActivatedRoute) {}
 
@@ -54,15 +54,15 @@ export class MenuComponent {
       let delay = (i+1) * 100;
       if(menuItem.routerLink !== currentPath) {
         setTimeout(() => {
-          menuItem.menuItemState = 'displayed';
+          menuItem.menuItemState = 'visible';
+          this.menuItemsVisible = true;
         }, delay)
       }
     });
   }
 
-  onAboutSiteChangeVisibility(visibility:boolean) {
-    this.aboutSiteVisibility = visibility;
-    this.aboutSiteVisibilityEvent.emit(visibility);
+  onAboutSiteOpen() {
+    this.aboutSiteShowEvent.emit();
     return false;
   }
 }

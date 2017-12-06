@@ -1,7 +1,7 @@
 <div class="la-container">
   <div class="column-filler"></div>
   <div class="column-menu">
-    <app-menu (aboutSiteVisibilityEvent)="dim = $event" [ngClass]="'appmenu'" [dimMenu]="dim"></app-menu>
+    <app-menu (aboutSiteVisibilityEvent)="dim = $event" [ngClass]="'appmenu'" [disableMenu]="dim"></app-menu>
   </div>
   <div class="column-booby" [ngStyle]="{'opacity': dim ? 0.3 : 1}">
     <app-booby-landing></app-booby-landing>
