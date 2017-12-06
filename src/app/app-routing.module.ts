@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { LandingComponent } from './main/landing/landing.component';
-import { AboutMeComponent } from './main/about-me/about-me.component';
-import { ContactComponent } from './main/contact/contact.component';
-import { FeetComponent } from './main/feet/feet.component';
-import { AboutSiteComponent } from './main/about-site/about-site.component';
+import { LandingLayoutComponent } from './layout/landing-layout/landing-layout.component';
+import { AboutMeComponent } from './content/about-me/about-me.component';
+import { ContactComponent } from './content/contact/contact.component';
+import { FeetComponent } from './content/feet/feet.component';
 
 const appRoutes:Routes = [
   { 
     path:'', 
-    component:LandingComponent, 
+    component:LandingLayoutComponent, 
     pathMatch:'full' 
   },
   { 
@@ -26,11 +25,6 @@ const appRoutes:Routes = [
   { 
     path:'feet', 
     component:FeetComponent, 
-    pathMatch:'full'
-  },
-  { 
-    path:'about_site', 
-    component:AboutSiteComponent, 
     pathMatch:'full'
   },
   // {path:'not-found', component:ErrorPageComponent, data:{message:'Error Message: Page not Found'}},

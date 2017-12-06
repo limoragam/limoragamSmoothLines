@@ -1,0 +1,35 @@
+@import "../../globalstyles.scss";
+
+.la-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.column-filler {
+    flex: 2 0;
+}
+.column-menu {
+    flex: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.appmenu {
+    display: inline-block;
+    bottom: 0;
+}
+
+.column-booby {
+    flex: 0;
+    margin: 0 1em;
+}
+
+.column-content {
+    flex: 2 1;
+    align-self: flex-start;
+}
+
