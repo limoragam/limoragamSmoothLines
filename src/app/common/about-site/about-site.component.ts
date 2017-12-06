@@ -6,12 +6,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./about-site.component.scss']
 })
 export class AboutSiteComponent {
-  @Output() aboutSiteVisibilityEvent = new EventEmitter<boolean>();
-  aboutSiteVisibility = false;
-
-  onAboutSiteChangeVisibility(visibility:boolean) {
-    this.aboutSiteVisibility = visibility;
-    this.aboutSiteVisibilityEvent.emit(visibility);
+  @Output() aboutSiteHideEvent = new EventEmitter();
+  
+  onAboutSiteHide() {
+    this.aboutSiteHideEvent.emit();
     return false;
   }
 }
