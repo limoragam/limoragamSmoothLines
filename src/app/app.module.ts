@@ -6,14 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { MenuComponent } from './common/menu/menu.component';
+import { AboutSiteComponent } from './common/about-site/about-site.component';
+
+import { LandingLayoutComponent } from './layout/landing-layout/landing-layout.component';
+
+import { LandingContentComponent } from './content/landing-content/landing-content.component';
+import { AboutMeComponent } from './content/about-me/about-me.component';
+import { ContactComponent } from './content/contact/contact.component';
+import { FeetComponent } from './content/feet/feet.component';
+
 import { BoobyLandingComponent } from './booby/booby-landing/booby-landing.component';
-import { LandingComponent } from './main/landing/landing.component';
-import { AboutMeComponent } from './main/about-me/about-me.component';
-import { ContactComponent } from './main/contact/contact.component';
-import { FeetComponent } from './main/feet/feet.component';
-import { AboutSiteComponent } from './main/about-site/about-site.component';
 import { EggComponent } from './booby/egg/egg.component';
-import { MenuComponent } from './menu/menu.component';
 import { SquawkComponent } from './booby/squawk/squawk.component';
 
 import { SafeUrlPipe } from './safe-url.pipe';
@@ -21,15 +25,20 @@ import { SafeUrlPipe } from './safe-url.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    BoobyLandingComponent,
-    LandingComponent,
+    MenuComponent,
+    AboutSiteComponent,
+
+    LandingLayoutComponent,
+
+    LandingContentComponent,
     AboutMeComponent,
     ContactComponent,
     FeetComponent,
-    AboutSiteComponent,
+
+    BoobyLandingComponent,
     EggComponent,
-    MenuComponent,
     SquawkComponent,
+
     SafeUrlPipe,
   ],
   imports: [

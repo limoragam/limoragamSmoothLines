@@ -1,0 +1,29 @@
+@import "../../globalstyles.scss";
+
+* {
+    white-space: nowrap;
+}
+
+#aboutsite {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.popup {
+    width: 118%;
+    text-align: left;
+    background-color:white;
+    position: relative;
+    padding: 0.6rem 0.5rem 0.1rem 1rem;
+    border: 0.3rem solid $wingcolor;
+    border-radius: 0.5rem;
+    z-index: 24;
+    margin-bottom: 1rem;
+}
+
+.x {
+    position: relative;
+    float: right;
+    top: -0.5rem;
+    font-size: 1.5rem;
+}
