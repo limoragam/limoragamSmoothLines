@@ -1,0 +1,56 @@
+@import "../../globalstyles.scss";
+
+// * {
+//     border: 1px solid red;
+// }
+
+.la-container {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "fillerL booby menu about . content content fillerR"
+                         "fillerL booby menu about . content content fillerR";
+    position: relative;
+}
+
+.area {
+    transition: opacity 300ms ease-in-out;
+}
+
+.menu {
+    grid-area: menu;
+    z-index: 10;
+    align-self: end;
+    justify-self: center;
+}
+
+.about-site {
+    grid-column: booby-start / span 2;
+    grid-row: 1;
+    z-index: 12;
+}
+
+.appmenu {
+    display: inline-block;
+    bottom: 0;
+}
+
+.booby {
+    grid-column-start: booby-start;
+    grid-column-end: span 5;
+    grid-row: 1 / span 2;
+}
+
+.content {
+    grid-area: content;
+}
+
+.fillerL {
+    grid-area: fillerL;
+}
+
+.fillerR {
+    grid-area: fillerR;
+}
+

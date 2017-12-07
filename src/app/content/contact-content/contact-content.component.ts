@@ -2,11 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: 'app-contact-content',
+  templateUrl: './contact-content.component.html',
+  styleUrls: ['./contact-content.component.scss']
 })
-export class ContactComponent {
+export class ContactContentComponent {
   @ViewChild('f') formObject:NgForm;
   dim = false;
   
