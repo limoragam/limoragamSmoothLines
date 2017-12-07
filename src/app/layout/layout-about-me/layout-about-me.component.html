@@ -1,0 +1,16 @@
+<div class="la-container">
+  <div class="area fillerL"></div>
+  <div class="area about-site" [ngStyle]="{'opacity': dim ? 0.8 : 0.3}">
+    <app-about-site (aboutSiteHideEvent)="dim=false"></app-about-site>
+  </div>
+  <div class="area menu" [ngStyle]="{'opacity': dim ? 0.3 : 1}">
+    <app-menu (aboutSiteShowEvent)="dim = true" [ngClass]="'appmenu'" [disableMenu]="dim"></app-menu>
+  </div>
+  <div class="area booby" [ngStyle]="{'opacity': dim ? 0.3 : 1}">
+    <app-booby-landing></app-booby-landing>
+  </div>
+  <div class="area content" [ngStyle]="{'opacity': dim ? 0.3 : 1}">
+    <app-content-about-me></app-content-about-me>
+  </div>
+  <div class="area fillerR"></div>
+</div>

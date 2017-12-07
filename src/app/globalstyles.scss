@@ -1,5 +1,7 @@
 $wingcolor: #6d5e50;
 $feetcolor: #00c8e1;
+$background-rgb: rgba(247, 245, 234, 1);
+$background-rgb-transparent: rgba(247, 245, 234, 0);
 
 ul {
     list-style: none;
@@ -7,4 +9,9 @@ ul {
 
 li:before {
     content: '\25BA';
+}
+
+.la-container {
+    height: 80vh;
+    max-height: 80%;
 }
