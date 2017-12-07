@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { LandingLayoutComponent } from './layout/landing-layout/landing-layout.component';
+import { LayoutLandingComponent } from './layout/layout-landing/layout-landing.component';
 import { AboutMeComponent } from './content/about-me/about-me.component';
-import { ContactLayoutComponent } from './layout/contact-layout/contact-layout.component';
+import { LayoutContactComponent } from './layout/layout-contact/layout-contact.component';
 import { FeetComponent } from './content/feet/feet.component';
 
 const appRoutes:Routes = [
   { 
     path:'', 
-    component:LandingLayoutComponent, 
+    component:LayoutLandingComponent, 
     pathMatch:'full' 
   },
   { 
@@ -19,7 +19,7 @@ const appRoutes:Routes = [
   },
   { 
     path:'contact', 
-    component:ContactLayoutComponent, 
+    component:LayoutContactComponent, 
     pathMatch:'full'
   },
   { 

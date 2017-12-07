@@ -9,12 +9,12 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './common/menu/menu.component';
 import { AboutSiteComponent } from './common/about-site/about-site.component';
 
-import { LandingLayoutComponent } from './layout/landing-layout/landing-layout.component';
-import { ContactLayoutComponent } from './layout/contact-layout/contact-layout.component';
+import { LayoutLandingComponent } from './layout/layout-landing/layout-landing.component';
+import { LayoutContactComponent } from './layout/layout-contact/layout-contact.component';
 
-import { LandingContentComponent } from './content/landing-content/landing-content.component';
+import { ContentLandingComponent } from './content/content-landing/content-landing.component';
 import { AboutMeComponent } from './content/about-me/about-me.component';
-import { ContactContentComponent } from './content/contact-content/contact-content.component';
+import { ContentContactComponent } from './content/content-contact/content-contact.component';
 import { FeetComponent } from './content/feet/feet.component';
 
 import { BoobyLandingComponent } from './booby/booby-landing/booby-landing.component';
@@ -29,11 +29,11 @@ import { SafeUrlPipe } from './safe-url.pipe';
     MenuComponent,
     AboutSiteComponent,
 
-    LandingLayoutComponent,
+    LayoutLandingComponent,
 
-    LandingContentComponent,
+    ContentLandingComponent,
     AboutMeComponent,
-    ContactContentComponent,
+    ContentContactComponent,
     FeetComponent,
 
     BoobyLandingComponent,
@@ -42,7 +42,7 @@ import { SafeUrlPipe } from './safe-url.pipe';
 
     SafeUrlPipe,
 
-    ContactLayoutComponent,
+    LayoutContactComponent,
   ],
   imports: [
     BrowserModule,
