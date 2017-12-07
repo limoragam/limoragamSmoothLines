@@ -3,7 +3,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { LandingLayoutComponent } from './layout/landing-layout/landing-layout.component';
 import { AboutMeComponent } from './content/about-me/about-me.component';
-import { ContactComponent } from './content/contact/contact.component';
+import { ContactLayoutComponent } from './layout/contact-layout/contact-layout.component';
 import { FeetComponent } from './content/feet/feet.component';
 
 const appRoutes:Routes = [
@@ -19,7 +19,7 @@ const appRoutes:Routes = [
   },
   { 
     path:'contact', 
-    component:ContactComponent, 
+    component:ContactLayoutComponent, 
     pathMatch:'full'
   },
   { 

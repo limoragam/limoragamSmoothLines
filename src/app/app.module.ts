@@ -10,10 +10,11 @@ import { MenuComponent } from './common/menu/menu.component';
 import { AboutSiteComponent } from './common/about-site/about-site.component';
 
 import { LandingLayoutComponent } from './layout/landing-layout/landing-layout.component';
+import { ContactLayoutComponent } from './layout/contact-layout/contact-layout.component';
 
 import { LandingContentComponent } from './content/landing-content/landing-content.component';
 import { AboutMeComponent } from './content/about-me/about-me.component';
-import { ContactComponent } from './content/contact/contact.component';
+import { ContactContentComponent } from './content/contact-content/contact-content.component';
 import { FeetComponent } from './content/feet/feet.component';
 
 import { BoobyLandingComponent } from './booby/booby-landing/booby-landing.component';
@@ -32,7 +33,7 @@ import { SafeUrlPipe } from './safe-url.pipe';
 
     LandingContentComponent,
     AboutMeComponent,
-    ContactComponent,
+    ContactContentComponent,
     FeetComponent,
 
     BoobyLandingComponent,
@@ -40,6 +41,8 @@ import { SafeUrlPipe } from './safe-url.pipe';
     SquawkComponent,
 
     SafeUrlPipe,
+
+    ContactLayoutComponent,
   ],
   imports: [
     BrowserModule,
