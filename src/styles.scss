@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* The following shouts during ng build that moveTo was deprecated yada yada. Ignore this  */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
 $text-color: #282820;
 $hover-color: $text-color;
 $background-color: #f7f5ea;
@@ -31,4 +35,3 @@ a:hover, a.active {
     font-weight: 700;
     color: $hover-color;
 }
-

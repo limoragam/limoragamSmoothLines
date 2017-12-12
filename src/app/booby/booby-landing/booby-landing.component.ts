@@ -9,7 +9,7 @@ import { BoobyLandingService } from './booby-landing.service';
 @Component({
   selector: 'app-booby-landing',
   templateUrl: './booby-landing.component.html',
-  styleUrls: ['./booby-landing.component.css'],
+  styleUrls: ['./booby-landing.component.scss'],
   providers: [ BoobyLandingService ]
 })
 export class BoobyLandingComponent implements OnInit, OnDestroy {

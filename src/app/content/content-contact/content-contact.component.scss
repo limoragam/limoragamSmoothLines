@@ -24,3 +24,29 @@ input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
     border: 1px solid #e22b00;
 }
+@import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+.form {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 300ms ease-in-out;
+    width: 20vw; // to fit into 2 columns.
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+.la-button {
+    padding: 0.15rem 0.4rem;
+}
+
+.la-button:disabled {
+    opacity: 1;
+}
+
+input.ng-invalid.ng-touched, 
+textarea.ng-invalid.ng-touched {
+    border: 1px solid #e22b00;
+}

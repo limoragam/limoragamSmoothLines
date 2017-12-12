@@ -8,11 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class ContentContactComponent {
   @ViewChild('f') formObject:NgForm;
-  dim = false;
-  
-  constructor() { }
 
-  onSubmit() {
+  onSubmit(myForm:NgForm) {
     //Send mail here
   }
 }

@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-landing.component.scss']
 })
 export class ContentLandingComponent {
-  dim = false;
 }

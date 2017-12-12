@@ -14,7 +14,7 @@ import { EggService } from './egg.service';
 })
 export class EggComponent implements OnInit {
   
-  constructor(private animationService:AnimationService, private eggService:EggService) { }
+  constructor(private animationService:AnimationService, public eggService:EggService) { }
 
   ngOnInit() {
     this.initEgg();

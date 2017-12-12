@@ -1,7 +1,7 @@
 declare var Snap: any;
 declare var mina: any;
 
-import { Injectable, ElementRef } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { AnimationFrame } from './animation-frame.model';
 

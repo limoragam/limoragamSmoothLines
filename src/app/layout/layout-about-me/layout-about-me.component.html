@@ -4,7 +4,7 @@
     <app-about-site (aboutSiteHideEvent)="dim=false"></app-about-site>
   </div>
   <div class="area menu" [ngStyle]="{'opacity': dim ? 0.3 : 1}">
-    <app-menu (aboutSiteShowEvent)="dim = true" [ngClass]="'appmenu'" [disableMenu]="dim"></app-menu>
+    <app-menu (aboutSiteShowEvent)="dim=true" [ngClass]="'appmenu'" [disableMenu]="dim"></app-menu>
   </div>
   <div class="area booby" [ngStyle]="{'opacity': dim ? 0.3 : 1}">
     <app-booby-landing></app-booby-landing>
