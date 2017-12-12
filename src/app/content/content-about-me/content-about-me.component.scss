@@ -2,13 +2,14 @@
 
 $arrow-color: #c4c0aa;
 
-* {
-    border: solid 1px green;
-}
+// * {
+//     border: solid 1px green;
+// }
 
 .aboutme-container {
     display: grid;
-    grid-template-rows: 1fr 15fr 1fr;
+    grid-gap: 0.5rem;
+    grid-template-rows: 2.5rem 1fr 2.5rem;
     grid-template-areas: "prev entries"
                          "dates entries"
                          "next entries";
@@ -30,52 +31,23 @@ $arrow-color: #c4c0aa;
     background: linear-gradient(to top, $background-rgb, $background-rgb-transparent);
 }
 
-// .arrow {
-//     text-align: center;
-//     a {
-//         padding: 0 0.5rem;
-//         color: transparent;
-//     }
-//     p {
-//         width: 0.8rem;
-//         height: 0.8rem;
-//         display: inline-block;
-//         margin: 0;
-//         border: solid $arrow-color;
-//         border-width: 0 0.2rem 0.2rem 0;
-//         transition: 300ms;
-//     }
-//     p:hover {
-//         border: solid #898468;
-//         border-width: 0 0.2rem 0.2rem 0;
-//     }
-//     &.next {
-//         clear: both;
-//     }
-//     .p-prev {
-//         transform: rotate(-140deg) skew(-5deg);
-//     }
-//     .p-next {
-//         transform: rotate(40deg) skew(-5deg);
-//     }
-// }
-
 h3 {
-    font-size: 1.2em;
+    // font-size: 1.2em;
     font-weight: 700;
 }
 
 h4 {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 600;
 }
 
 .dates {
     grid-area: dates;
     padding: 0 0.2rem 0 0;
-    font-size: 0.8em;
+    font-size: 0.9em;
     white-space: no-wrap;
     text-align: right;
+    align-self: center;
 }
 
 .entries {
@@ -83,7 +55,6 @@ h4 {
     overflow: hidden;
 
     p {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 }
-

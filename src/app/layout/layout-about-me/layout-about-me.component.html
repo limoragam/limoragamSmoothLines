@@ -1,6 +1,6 @@
 <div class="la-container">
   <div class="area fillerL"></div>
-  <div class="area about-site" [ngStyle]="{'opacity': dim ? 0.8 : 0.3}">
+  <div class="area about-site" [ngStyle]="{'opacity': dim ? 0.8 : 0}">
     <app-about-site (aboutSiteHideEvent)="dim=false"></app-about-site>
   </div>
   <div class="area menu" [ngStyle]="{'opacity': dim ? 0.3 : 1}">

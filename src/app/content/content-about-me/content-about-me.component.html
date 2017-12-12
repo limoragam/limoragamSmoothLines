@@ -1,49 +1,175 @@
-<div class="aboutme-container">
-  <div class="prev" (mouseenter)="scrollState='scrollup'" (mouseleave)="scrollState='scrollstop'"></div>
+<div class="aboutme-container" (window:resize)="onResize($event)">
+  <div class="prev" (mouseenter)="scroll('up')" (mouseleave)="scroll('none')"></div>
   
   <div class="dates">
     <ul id="dates">
-      <li><a href="#2015-2017">2015-2017</a></li>
-      <li><a href="#2013-2015">2013-2015</a></li>
-      <li><a href="#">2007-2013</a></li>
-      <li><a href="#">2002-2007</a></li>
-      <li><a href="#">2000-2001</a></li>
-      <li><a href="#">1998-2001</a></li>
-      <li><a href="#">1997-2000</a></li>
-      <li><a href="#">1996-1997</a></li>
-      <li><a href="#">1992-1995</a></li>
-      <li><a href="#">1988-1992</a></li>
-      <li><a href="#">1986-1988</a></li>
+        <p class="spacer"></p>
+        <li><a href="#" (click)="scrollEntriesTo('entry-fed', $event)">FED</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-harmonic', $event)">Harmonic</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-waves', $event)">Waves</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-biosense', $event)">Biosense</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-tau', $event)">TAU</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-gilian', $event)">Gilian</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-biu', $event)">BIU</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-yellowpages', $event)">Yellow&nbsp;Pages</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-aquanet', $event)">Aquanet</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-india', $event)">India</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-carta', $event)">Carta</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-bezalel', $event)">Bezalel</a></li>
+        <li><a href="#" (click)="scrollEntriesTo('entry-idf', $event)">IDF</a></li>
     </ul>
   </div>
 
-  <div class="entries" [@scroll]="scrollState">
-    <h4>Software&nbsp;Engineer @Harmonic</h4>
-    <p id="2015-2017">
-      Harmonic enables customers to produce and deliver high quality video. The delivery side, of which I was part,
-      involved moving lots of bits from one place to another at incredible speeds and accuracy. Impressive
-      stuff, done by some impressively smart people, but not really my cup of tea.<br>
-      There was a period of several euphoric months, though, in which I was in a project that involved web and UI. 
-      This was absolutely heaven, I woke up every morning with a smile and couldn't wait to go to work. I loved 
-      stirring the DOM and figuring out how it all worked.<br>
-      Then it hit me. This is what I'd really like my life to look like.<br>
-      This project was short lived, and with it my euphoria.<br>
-      Which is good. Because here I am, doing what I like.
+  <div id="entries" class="entries" (onScroll)="onMouseWheelScroll()">
+    <p class="spacer">&nbsp;</p>
+    <p>
+        This is the long story. Feel free to navigate yourself around using the bullets on the side.
     </p>
-    <h3>Waves Audio</h3>
-    <h4>Software&nbsp;Engineer, Plug&#8209;Ins&nbsp;Team</h4>  <!-- none-breaking hyphen & space -->
-    <p id="2013-2015">
-        In Waves Audio, I started out as part of the Plug-Ins team, creating new plug-ins utilizing the
-        existing infrastructure for plug-ins, and designing new features where the infrastructure fell short
-        of requirements. I gradually moved deeper into the infrastructure, adding new capabilities and
-        improvements.
-        ☼ Cross-platform work (Windows, Mac).
-        ☼ New feature design and implementation.
-        ☼ Most code is written in C++; knowledge, understanding and implementation of scripting (perl,
-        python) is required.
-        ☼ Hands-on and problem-solving capabilities are essential.
+
+    <h4 id="entry-fed">Web Designer&nbsp;& Front End Developer</h4>
+    <p>
+        <b>2017-today</b>
+        I do this stuff. I love it.
     </p>
+
+    <h4 id="entry-harmonic">Software&nbsp;Engineer @Harmonic</h4>
+    <p>
+        <b>2015-2017</b>
+        Harmonic enables customers to produce and deliver high quality video. The delivery side, of which I was part, 
+        involved moving lots of bits from one place to another at incredible speeds and accuracy. Impressive stuff, 
+        done by some impressively smart people, but not really my cup of tea.
+        <br>There was a period of several euphoric months, though, in which I was in a project that involved Software Design,
+        Web, Java and UI. This was absolutely heaven, I woke up every morning with a smile and couldn't wait to go 
+        to work. I loved stirring the DOM and figuring out how it all worked.
+        <br>Then it hit me. This is what I'd really like my life to look like.
+        <br>This project was short lived, and with it my euphoria.
+        <br>Which is good. Because here I am, doing exactly what I love.
+    </p>
+
+    <h4 id="entry-waves">Software&nbsp;Engineer @Waves&nbsp;Audio</h4>  <!-- none-breaking hyphen & space -->
+    <p>
+        <b>2013-2015</b>
+        Waves Audio is a music company. This automatically gives it special status in my book, as many of the people it 
+        naturally draws to it are Musicians, a sort of subcategory of Magicians. Some of my best friends come from Waves.
+        <br>I worked in the Plugins team, connecting algorithms with UI to create units which would plug into Digital Audio 
+        Workstations. Lots of DAWs. Backward compatible to lots of versions. On various OSs. Backward compatible to lots of 
+        versions of them. (Oh, so <i>many</i> variations.)
+    </p>
+
+    <h4 id="entry-biosense">Software&nbsp;Engineer @Biosense</h4>
+    <p>
+        <b>2007-2013</b>
+        Biosense-Webster is an awesome company that is a leader in diagnosis and treatment of heart rhythm disorders. It 
+        employs some of the most interesting and talented people I know, many of which I keep as friends. 
+        <br>As a Software Engineer I mostly did, well, surprise, hardcore software engineering. The internals. Designing and
+        implementing Object Oriented features and modules. Moving large data around in real time. Syncing algorithms. 
+        <br>Had the pleasure of actually seeing my work curing people in hospitals, which added the spices of mission and 
+        great excitement.
+        <br>Fascinating work which mostly involved the left part of my brain, and which I heartily enjoyed.
+    </p>
+
+    <h4 id="entry-tau">MSc in Biomedical Engineering @TAU</h4>
+    <p>
+        <b>2002-2007</b>
+        I spent five years at Tel Aviv University.
+        <br>The first two years were spent doing complementary courses to an Engineering degree, while simultenously 
+        raising a baby (both were successful).
+        <br>The next two were spent doing the actual MSc: courses, research about deep-tissue stresses in people confined
+        to wheelchairs, writing a scientific article about it.
+        <br>The last year was spent at my supervisor's lab, writing some more articles, at his generous invitation. 
+        As it turns out, I have a fascination for the subject. And I'm pretty good at writing articles.
+        <br>This was a period of fulfillment and discovery. The human body and its physiology was like a great adventure. 
+        The Biomechanical field, into which I stepped almost by accident, turned out to be exciting and, surprisingly, 
+        full of potential for Software Engineers like me.
+        <br>Graduated with honors.
+    </p>
+
+    <h4 id="entry-gilian">GUI Developer @Gilian</h4>
+    <p>
+        <b>2000-2001</b>
+        On my last year at BIU, I answered a friend's request and came to work at Gilian (which has since 
+        then changed its name to Breach Security and then to Trustwave). The goal of this company is to fight 
+        crime. Cybercrime. Hackers.
+        <br>As I was bringing with me experience as a Graphic Designer, I was assigned to the GUI team and worked 
+        on the Client side. 
+    </p>
+
+    <h4 id="entry-biu">BSc in Computer Science @BIU</h4>
+    <p>
+        <b>1998-2001</b>
+        Studying at Bar Ilan University was great. My final project was a GUI system for a voice recognition program, 
+        using Java and a DB. Graduated with honors.
+    </p>
+
+    <h4 id="entry-yellowpages">Web Designer & Developer @Yellow Pages</h4>
+    <p>
+        <b>1997-2000</b>
+        There was Internet before 2000...and I was there.
+        <br>This was when HTML was only 3, CSS wasn't even born yet and JavaScript was nothing less than 
+        a natural disaster. Yet, we made the Web beautiful and practical, even in those limited conditions.
+        <br>Yellow Pages was good at selling, and it was leveraging this advantage to open a new department
+        for Websites, customized for each client.
+        <br>I joined the team as a Graphic Designer and quickly found, to my delight, that many tools and techniques 
+        were required for creating a good website. Writing scripts was challenging and fun, and I found myself 
+        spending much time with the Backend guys, learning what they were doing. And then I opened a C++ book, 
+        just out of curiosity, and a whole new world opened up for me.
+        <br>On my horizon perched Software Engineering.
+    </p>
+
+    <h4 id="entry-aquanet">Web Designer & Developer @Aquanet</h4>
+    <p>
+        <b>1996-1997</b>
+        When I returned from India, a friend of mine invited me to his office.
+        <br>Have you heard about Internet? he asked.
+        <br>Well... vaguely...
+        <br>And so he introduced me to the Web, and recommended it as a career for me. This sounds absurd today, 
+        everybody knows about the Web. But back then it was newly discovered as a means for marketing.
+        <br>With no experience whatsoever I landed a job, and then went on to Aquanet where I was totally on my own,
+        to learn everything by myself. New software. Design for the web. UX. The whole works.
+        <br>This was a new world just waiting for me to explore it. And I did.
+    </p>
+
+    <h4 id="entry-india">Traveller @India</h4>
+    <p>
+        <b>1995-1996</b>
+        There is a difference between Touring and Traveling. Maybe it lies in the expectations one develops before 
+        going somewhere. When you Tour, you take with you a list of expectations. When you Travel, your major 
+        expectation is to discover something you didn't know. To be surprised.
+        <br>I much prefer the latter, but it requires time.
+        <br>So I bought myself a one way ticket for India and set myself to learn something I didn't know. Including
+        how to get along all by myself. I travelled for six months in India (and then, as a major surprise, two more 
+        in the Philippines). Met all sorts of people. Been all sorts of places. Done all sorts of things. Surprised 
+        myself again and again and again. I have India to thank for a significant part of my personality.
+    </p>
+
+    <h4 id="entry-carta">Graphic Designer @Carta</h4>
+    <p>
+        <b>1992-1995</b>
+        Carta is a publisher of books and maps. 
+        <br>I worked with authors, editors and translators. Some had ideas of what their book should look like. Some 
+        didn't. I was responsible for conception and design of their ideas. If they had them. Otherwise, I'd bring the
+        ideas, too. Illustrations. Print. It was sort of like being a midwife.
+    </p>
+
+    <h4 id="entry-bezalel">Photography & Graphic Design @Bezalel</h4>
+    <p>
+        <b>1988-1992</b>
+        There probably has to be a down period in my life somewhere. And this has to be it. I came with great
+        expectations and high hopes to Bezalel, Academy of Arts and Design. And was deeply disappointed. 
+        In Bezalel, in the people there, in myself, and in life in general. That's not to say Bezalel is not a great 
+        place. But it wasn't the right place and time for me.
+    </p>
+
+    <h4 id="entry-idf">Translator @IDF</h4>
+    <p>
+        <b>1986-1988</b>
+        Have you really read up to here or are you just skipping to the end?
+        <br>IDF was a period of magic. Worked in shifts, translating English to Hebrew in real time, and did a great job 
+        at having fun in Tel Aviv the rest of the time. 
+    </p>  
+
+    <p class="spacer">&nbsp;</p>
   </div>
 
-  <div class="next" (mouseenter)="scrollState='scrolldown'" (mouseleave)="scrollState='scrollstop'"></div>
+  <div class="next" (mouseenter)="scroll('down')" (mouseleave)="scroll('none')"></div>
 </div>
