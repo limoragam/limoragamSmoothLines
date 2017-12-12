@@ -4,7 +4,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { LayoutLandingComponent } from './layout/layout-landing/layout-landing.component';
 import { LayoutAboutMeComponent } from './layout/layout-about-me/layout-about-me.component';
 import { LayoutContactComponent } from './layout/layout-contact/layout-contact.component';
-import { FeetComponent } from './content/feet/feet.component';
+import { LayoutFeetComponent } from './layout/layout-feet/layout-feet.component';
 
 const appRoutes:Routes = [
   { 
@@ -24,7 +24,7 @@ const appRoutes:Routes = [
   },
   { 
     path:'feet', 
-    component:FeetComponent, 
+    component:LayoutFeetComponent, 
     pathMatch:'full'
   },
   // {path:'not-found', component:ErrorPageComponent, data:{message:'Error Message: Page not Found'}},

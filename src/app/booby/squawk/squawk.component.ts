@@ -13,7 +13,7 @@ import { SquawkService } from './squawk.service';
 })
 export class SquawkComponent implements OnInit {
 
-  constructor(private squawkService:SquawkService) { }
+  constructor(public squawkService:SquawkService) { }
 
   ngOnInit() {
     this.initBooby();

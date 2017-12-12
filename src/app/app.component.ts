@@ -13,4 +13,5 @@ import { AttributesService } from './booby/attributes.service';
   ]
 })
 export class AppComponent {
+  title = "Limor Agam";
 }
