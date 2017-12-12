@@ -13,7 +13,7 @@ import { LayoutLandingComponent } from './layout/layout-landing/layout-landing.c
 import { LayoutContactComponent } from './layout/layout-contact/layout-contact.component';
 
 import { ContentLandingComponent } from './content/content-landing/content-landing.component';
-import { AboutMeComponent } from './content/about-me/about-me.component';
+import { ContentAboutMeComponent } from './content/content-about-me/content-about-me.component';
 import { ContentContactComponent } from './content/content-contact/content-contact.component';
 import { FeetComponent } from './content/feet/feet.component';
 
@@ -22,6 +22,7 @@ import { EggComponent } from './booby/egg/egg.component';
 import { SquawkComponent } from './booby/squawk/squawk.component';
 
 import { SafeUrlPipe } from './safe-url.pipe';
+import { LayoutAboutMeComponent } from './layout/layout-about-me/layout-about-me.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { SafeUrlPipe } from './safe-url.pipe';
     LayoutLandingComponent,
 
     ContentLandingComponent,
-    AboutMeComponent,
+    ContentAboutMeComponent,
     ContentContactComponent,
     FeetComponent,
 
@@ -43,6 +44,8 @@ import { SafeUrlPipe } from './safe-url.pipe';
     SafeUrlPipe,
 
     LayoutContactComponent,
+
+    LayoutAboutMeComponent,
   ],
   imports: [
     BrowserModule,
